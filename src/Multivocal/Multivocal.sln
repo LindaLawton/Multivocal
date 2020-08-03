@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multivocal", "Multivocal\Multivocal.csproj", "{02D1A1EF-E98F-4955-BEF3-C6984BA42BA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1D4C98E2-84AE-4229-A9AD-900FEF85BC21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multivocal.UnitTests", "..\..\test\Multivocal.UnitTests\Multivocal.UnitTests.csproj", "{C5B5CB2B-2E95-44EE-AAA5-243874E9B8EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02D1A1EF-E98F-4955-BEF3-C6984BA42BA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02D1A1EF-E98F-4955-BEF3-C6984BA42BA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02D1A1EF-E98F-4955-BEF3-C6984BA42BA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02D1A1EF-E98F-4955-BEF3-C6984BA42BA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5B5CB2B-2E95-44EE-AAA5-243874E9B8EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5B5CB2B-2E95-44EE-AAA5-243874E9B8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5B5CB2B-2E95-44EE-AAA5-243874E9B8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5B5CB2B-2E95-44EE-AAA5-243874E9B8EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C5B5CB2B-2E95-44EE-AAA5-243874E9B8EA} = {1D4C98E2-84AE-4229-A9AD-900FEF85BC21}
+	EndGlobalSection
+EndGlobal
