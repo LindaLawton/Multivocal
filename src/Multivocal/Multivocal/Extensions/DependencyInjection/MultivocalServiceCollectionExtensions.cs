@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Multivocal.Extensions.DependencyInjection
@@ -13,7 +14,7 @@ namespace Multivocal.Extensions.DependencyInjection
         {
             return new MultivocalBuilder(services);
         }
-        
+
         /// <summary>
         /// Adds Multivocal.
         /// </summary>
@@ -26,6 +27,13 @@ namespace Multivocal.Extensions.DependencyInjection
             builder.AddDefaultEndpoints();
 
             return builder;
+        }
+
+        public static IMultivocalBuilder AddMultivocal(this IServiceCollection services,
+            Action<MultivocalOptions> setupAction)
+        {
+            services.Configure(setupAction);
+            return services.AddMultivocal();
         }
     }
 }

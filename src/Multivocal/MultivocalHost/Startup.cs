@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -22,8 +23,12 @@ namespace MultivocalHost
         {
             services.AddControllers();
 
-            services.AddMultivocal();
-
+            services.AddMultivocal(options => options.Intents = new List<IIntentResponseGenerator>
+            {
+                // Configure each intent.
+                new GenericIntentResponseGenerator("Default Welcome Intent"),
+                new GenericIntentResponseGenerator("FallBack")
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,7 +42,7 @@ namespace MultivocalHost
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            
+
             app.UseMultivocal();
 
             app.UseAuthorization();

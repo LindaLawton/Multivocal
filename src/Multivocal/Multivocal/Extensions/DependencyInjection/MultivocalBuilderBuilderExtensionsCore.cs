@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Multivocal.Config;
 using Multivocal.Endpoints;
+using Multivocal.Parser;
 
 namespace Multivocal.Extensions.DependencyInjection
 {
@@ -18,6 +19,7 @@ namespace Multivocal.Extensions.DependencyInjection
         public static IMultivocalBuilder AddDefaultEndpoints(this IMultivocalBuilder builder)
         {
             builder.Services.AddTransient<IEndpointRouter, EndpointRouter>();
+            builder.Services.AddSingleton<RequestParser>();
 
             builder.AddEndpoint<MainWebHookEndPoint>("MultivocalWebHook", "/Multivocal");
 
